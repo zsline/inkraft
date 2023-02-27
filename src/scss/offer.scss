@@ -47,9 +47,15 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        gap: 50px;
         align-items: end;
+        &--left {
+            position: relative;
+            min-width: 0;
+            overflow: hidden;
+        }
         &--right {
-            max-width: calc(var(--index) * 22);
+            min-width: calc(var(--index) * 22);
         }
         &--text {
             position: relative;
@@ -112,11 +118,10 @@
 }
 
 .offer-slider {
-    position: relative;
     &__btn {
         position: absolute;
-        bottom: -50px;
-        left: 100px;
+        bottom: 0px;
+        left: 80px;
         width: 80px;
         height: 80px;
         border: 1px solid var(--accent);
@@ -124,8 +129,9 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        z-index: 1000;
         &--next {
-            left: 180px;
+            left: 160px;
         }
     }
 }
