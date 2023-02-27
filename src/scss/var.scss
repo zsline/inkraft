@@ -1,0 +1,15 @@
+:root {
+    --index: calc(1vw + 1vh);
+    --accent: #C18E57;
+    --main-gap: calc(var(--index) * 5);
+    --big-gap: calc(var(--index) * 10);
+    --small-gap: calc(var(--index) * 2);
+    --body-width: 1550px;
+    --body-fonts: "Montserrat", sans-serif;
+    --second-fonts: "Bahamas", sans-serif;
+    --bg-color: #000;
+    --text-color: #fff;
+    --text-accent-color: #BCBCBC;
+    --green: #98BB37;
+    // --text-sh: 1px 1px 12px rgba(#000000, 0.3);
+}
