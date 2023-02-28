@@ -68,3 +68,57 @@ p {
     object-fit: cover;
     opacity: 0.2;
 }
+
+.tabs__panel {
+    display: none;
+}
+
+.tabs__nav {
+    list-style: none;
+    display: flex;
+}
+
+.tabs__nav-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    gap: 50px;
+    height: 160px;
+    transition: all 0.3s;
+    & span {
+        display: inline;
+        color: var(--accent);
+    }
+    & svg {
+        width: 100%;
+        max-width: 140px;
+    }
+}
+
+.tabs__nav {
+    list-style: none;
+    display: flex;
+}
+
+.tabs__panel--active {
+    display: block;
+}
+
+.tabs__nav-btn:focus {
+    color: #fff;
+}
+
+.tabs__nav-btn--active {
+    background-color: #fff;
+    & .tabs__nav-text {
+        color: black;
+        & span {
+            color: var(--accent);
+        }
+    }
+}
+
+.tabs__nav-item:not(:first-child) {
+    border-top: 2px solid var(--accent);
+}

@@ -7,6 +7,7 @@ flsFunctions.isWebp();
 
 
 const swiper = new Swiper('.offer-slider', {
+    modules: [Navigation, Pagination],
 
     navigation: {
         nextEl: '.swiper-button-next',

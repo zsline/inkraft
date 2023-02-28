@@ -1,0 +1,93 @@
+.works {
+    margin-bottom: 100px;
+    &__title {
+        margin-bottom: 80px;
+    }
+    &__inner {
+        position: relative;
+        background-color: #fff;
+        margin-bottom: 80px;
+    }
+    &__logo {
+        position: absolute;
+        top: 20px;
+        left: 300px;
+    }
+    &__tabs {
+        display: grid;
+        grid-template-columns: 250px auto;
+        &--nav {
+            display: flex;
+            flex-direction: column;
+        }
+        &--btn {
+            width: 100%;
+        }
+        &--btn:nth-child(1) {
+            background-color: #17191C;
+        }
+        &--btn:nth-child(2) {
+            background-color: #303331;
+        }
+        &--btn:nth-child(3) {
+            background-color: #6A6A6A;
+        }
+        &--btn:nth-child(4) {
+            background-color: #757575;
+        }
+        &--text {
+            position: absolute;
+            top: -120px;
+            right: 60px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            margin: 0 auto;
+            & span {
+                display: block;
+                color: var(--accent);
+            }
+        }
+        &--panel {
+            position: relative;
+        }
+        &--desc {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &--content {
+            position: relative;
+            background-color: #fff;
+            color: black;
+            padding: 50px 35px;
+            height: 80%;
+            margin-top: auto;
+        }
+        &--info {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: start;
+            & img {
+                min-width: 65%;
+                height: auto;
+                max-height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+    &__consultation {
+        text-align: center;
+        &--text {
+            font-weight: 500;
+            font-size: calc(var(--index)*1.41);
+            line-height: 159.4%;
+            color: var(--text-accent-color);
+            margin-bottom: 50px;
+        }
+        &--btn {
+            max-width: calc(var(--index) * 23);
+            margin: 0 auto;
+        }
+    }
+}
