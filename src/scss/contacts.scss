@@ -1,0 +1,22 @@
+.contacts {
+    margin-bottom: 100px;
+    &__title {
+        margin-bottom: 100px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+    &__text {
+        margin-bottom: 20px;
+    }
+    &__map {
+        filter: brightness(60%);
+        transition: all 0.3s;
+        &:hover {
+            filter: brightness(100%);
+        }
+    }
+}

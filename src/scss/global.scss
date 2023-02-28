@@ -5,6 +5,7 @@ body {
     font-size: 20px;
     line-height: 32px;
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 h3 {
@@ -32,6 +33,7 @@ p {
     max-width: var(--body-width);
     padding: 0 var(--main-gap);
     margin: 0 auto;
+    z-index: 100;
 }
 
 .header {
@@ -120,5 +122,19 @@ p {
 }
 
 .tabs__nav-item:not(:first-child) {
-    border-top: 2px solid var(--accent);
+    // border-top: 2px solid var(--accent);
+}
+
+.products-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--accent);
+    right: 0;
+    bottom: 70px;
+    width: 80px;
+    height: 80px;
+    z-index: 100;
+    cursor: pointer;
 }

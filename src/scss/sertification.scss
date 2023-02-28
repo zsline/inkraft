@@ -1,0 +1,32 @@
+    .sertification {
+        background-image: url(../img/sert-bg.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        padding: 200px 0;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .7);
+            z-index: 1;
+        }
+        &__title {
+            margin-bottom: 200px;
+        }
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & img {
+                filter: brightness(60%);
+                transition: all 0.3s;
+                &:hover {
+                    filter: brightness(100%);
+                }
+            }
+        }
+    }
