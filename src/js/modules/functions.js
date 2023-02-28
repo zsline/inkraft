@@ -136,11 +136,6 @@ const tabs1 = new Tabs('tab', {
     }
 });
 
-const tabs3 = new Tabs('tab3', {
-    isChanged: (tabs) => {
-        console.log(tabs);
-    }
-});
 
-tabs1.switchTabs(document.querySelector('#tab3'));
-tabs3.switchTabs(document.querySelector('#tab3-2'));
+// tabs1.switchTabs(document.querySelector('#tab3'));
+// tabs3.switchTabs(document.querySelector('#tab3-2'));
