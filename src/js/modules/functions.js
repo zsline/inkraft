@@ -14,7 +14,64 @@ export function isWebp() {
         document.documentElement.classList.add(className);
     });
 }
+import Swiper, { Navigation, Pagination } from 'swiper';
 
+//============
+// слайдер верхний
+//============
+const swiper = new Swiper('.offer-slider', {
+    modules: [Navigation, Pagination],
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+//============
+// слайдер portfolio
+//============
+const swiper2 = new Swiper('.portfolio__container', {
+    modules: [Navigation, Pagination],
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 2.6,
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+});
+//============
+// слайдер products
+//============
+const w = +window.innerWidth;
+const cont = document.querySelector('.products__title').clientWidth;
+const gap = (w - cont) / 2.08;
+console.dir(gap);
+const swiper3 = new Swiper('.products__slider', {
+    modules: [Navigation, Pagination],
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    wrapperClass: 'products__slider--wrapper',
+    slideClass: 'products__slider--slide',
+    slidesOffsetBefore: gap,
+    loop: true,
+    slidesPerView: 1.41,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+//============
+// табы "выполненные работы"
+//============
 
 class Tabs {
     constructor(selector, options) {
@@ -132,10 +189,6 @@ class Tabs {
 
 const tabs1 = new Tabs('tab', {
     isChanged: (tabs) => {
-        console.log(tabs);
+        // console.log(tabs);
     }
 });
-
-
-// tabs1.switchTabs(document.querySelector('#tab3'));
-// tabs3.switchTabs(document.querySelector('#tab3-2'));
