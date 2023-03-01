@@ -28,14 +28,26 @@
             }
         }
         &-info {
+            position: relative;
             width: calc(var(--index)*15);
             height: 610px;
             position: absolute;
             top: 220px;
-            right: calc((100vw - (var(--index)) * 55) /2);
+            right: calc((100vw - (var(--index)) * 57) /2);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding-right: 20px;
+            border-right: 1px solid var(--text-accent-color);
+            &::before {
+                position: absolute;
+                content: '';
+                height: 2px;
+                width: calc(var(--index) * 8);
+                bottom: 0;
+                right: 0;
+                background-color: var(--text-accent-color);
+            }
             & p {
                 margin-bottom: auto;
             }

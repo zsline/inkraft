@@ -19,7 +19,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 //============
 // слайдер верхний
 //============
-const swiper = new Swiper('.offer-slider', {
+const swiper = new Swiper('.offer__slider', {
     modules: [Navigation, Pagination],
     loop: true,
     navigation: {

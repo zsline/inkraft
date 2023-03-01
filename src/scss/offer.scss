@@ -2,8 +2,9 @@
     position: relative;
     background-image: url(../img/offer-bg.png);
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: bottom right;
     height: calc(100vh - 110px);
+    min-height: 680px;
     &::before {
         content: '';
         position: absolute;
@@ -12,6 +13,7 @@
         left: 0;
         right: 0;
         background-color: rgba($color: #000000, $alpha: 0.7);
+        z-index: 2;
     }
     &__title {
         font-weight: 700;
@@ -22,6 +24,17 @@
         max-width: 1260px;
         margin-bottom: 15px;
         padding-top: 150px;
+        @media(max-width: 960px) {
+            padding-top: 50px;
+        }
+        @media(max-width: 753px) {
+            font-size: calc(var(--index) * 2.6);
+            line-height: calc(var(--index) * 3.2);
+        }
+        @media(max-width: 400px) {
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
     }
     &__subtitle {
         display: block;
@@ -32,6 +45,7 @@
         text-align: left;
         margin-bottom: 60px;
         padding-bottom: calc(var(--index) * 5.4);
+        white-space: nowrap;
         & span {
             position: absolute;
             bottom: 0;
@@ -42,6 +56,26 @@
             line-height: 136px;
             color: var(--text-accent-color);
             margin-left: 30%;
+            @media(max-width: 1200px) {
+                bottom: -20px;
+                right: 30%;
+            }
+            @media(max-width: 753px) {
+                bottom: -70px;
+                font-size: 100px;
+            }
+        }
+    }
+    &__slider {
+        min-width: 0;
+        max-width: 540px;
+        margin: 0 auto;
+        overflow: hidden;
+        @media (max-width: 540px) {
+            max-width: 300px;
+        }
+        @media (max-width: 400px) {
+            max-width: 280px;
         }
     }
     &__inner {
@@ -49,13 +83,11 @@
         justify-content: space-between;
         gap: 50px;
         align-items: end;
-        &--left {
-            position: relative;
-            min-width: 0;
-            overflow: hidden;
-        }
-        &--right {
-            min-width: calc(var(--index) * 22);
+        min-width: 0;
+        @media(max-width: 753px) {
+            flex-direction: column;
+            align-items: start;
+            gap: 30px;
         }
         &--text {
             position: relative;
@@ -63,7 +95,19 @@
             font-size: calc(var(--index) * 1.2);
             line-height: calc(var(--index) * 2);
             margin-left: auto;
-            padding-bottom: 80px;
+            padding-bottom: calc(var(--index) * 3);
+            @media(max-width: 960px) {
+                font-size: calc(var(--index) * 1);
+            }
+            @media(max-width: 753px) {
+                padding-bottom: calc(var(--index) * 7);
+                font-size: calc(var(--index) * 2.6);
+                line-height: calc(var(--index) * 3);
+            }
+            @media (max-width: 540px) {
+                font-size: calc(var(--index) * 2);
+                max-width: 280px;
+            }
             & span {
                 color: var(--green);
                 font-weight: 700;
@@ -73,14 +117,26 @@
                 font-size: calc(var(--index) * 2);
                 text-indent: 0;
                 margin: 0;
+                @media(max-width: 753px) {
+                    font-size: calc(var(--index) * 3.2);
+                }
             }
             & img {
                 position: absolute;
-                bottom: 70px;
-                right: 10px;
+                bottom: calc(var(--index) * 1);
+                right: calc(var(--index) * 1.5);
                 width: 80px;
                 height: 80px;
                 object-fit: cover;
+                @media (max-width: 540px) {
+                    right: calc(var(--index) * 10);
+                }
+                @media (max-width: 400px) {
+                    width: 60px;
+                    height: 60px;
+                    right: calc(var(--index) * 3);
+                    bottom: calc(var(--index) * 1.8);
+                }
             }
         }
     }
@@ -96,6 +152,27 @@
         cursor: pointer;
         transition: all 0.3s;
         animation: down linear infinite 1s;
+        @media(max-width: 753px) {
+            display: none;
+        }
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        width: 100%;
+        &--slider {
+            position: relative;
+            width: 180px;
+            height: 80px;
+            @media(max-width: 989px) {
+                width: 260px;
+            }
+            @media(max-width: 753px) {
+                display: none;
+            }
+        }
     }
 }
 
@@ -120,8 +197,7 @@
 .offer-slider {
     &__btn {
         position: absolute;
-        bottom: 0px;
-        left: 80px;
+        bottom: 0;
         width: 80px;
         height: 80px;
         border: 1px solid var(--accent);
@@ -131,15 +207,16 @@
         cursor: pointer;
         z-index: 1000;
         &--next {
-            left: 160px;
+            right: 0;
         }
     }
 }
 
 .offer .vertical-incraft {
     position: absolute;
-    left: 50px;
-    top: 0px;
+    left: calc(var(--index) * 1.5);
+    top: calc(var(--index) * 1.5);
     opacity: 0.5;
-    z-index: -1;
+    height: calc(var(--index) * 27);
+    z-index: 1;
 }
