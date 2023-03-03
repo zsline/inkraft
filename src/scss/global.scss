@@ -31,6 +31,7 @@ p {
 .container {
     position: relative;
     max-width: var(--body-width);
+    width: 100%;
     padding: 0 var(--main-gap);
     margin: 0 auto;
     z-index: 100;
@@ -53,7 +54,7 @@ p {
 }
 
 .big-btn {
-    width: 670px;
+    max-width: 670px;
     padding: 30px;
     font-size: 24px;
     line-height: 29px;
@@ -93,7 +94,7 @@ p {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px calc(var(--index)*2.5);
     gap: 50px;
     height: 160px;
     transition: all 0.3s;
@@ -104,6 +105,9 @@ p {
     & svg {
         width: 100%;
         max-width: 140px;
+    }
+    @media (max-width: 500px) {
+        height: calc(var(--index)*7);
     }
 }
 

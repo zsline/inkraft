@@ -4,6 +4,9 @@
         background-position: bottom;
         background-size: cover;
         padding: 200px 0;
+        @media (max-width: 540px) {
+            padding: 50px 0;
+        }
         &:after {
             content: '';
             position: absolute;
@@ -16,17 +19,33 @@
         }
         &__title {
             margin-bottom: 200px;
+            @media (max-width: 740px) {
+                margin-bottom: 80px;
+            }
+            @media (max-width: 540px) {
+                margin-bottom: 50px;
+            }
         }
         &__inner {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             align-items: center;
+            width: 100%;
+            gap: 50px;
             & img {
+                flex: 1 1 30%;
                 filter: brightness(60%);
                 transition: all 0.3s;
+                width: 100%;
+                height: auto;
                 &:hover {
                     filter: brightness(100%);
                 }
+            }
+            @media (max-width: 740px) {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
             }
         }
     }

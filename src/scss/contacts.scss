@@ -2,12 +2,19 @@
     margin-bottom: 100px;
     &__title {
         margin-bottom: 100px;
+        @media (max-width: 760px) {
+            margin-bottom: 50px;
+        }
     }
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 50px;
+        height: 100%;
+        @media (max-width: 760px) {
+            flex-direction: column;
+        }
     }
     &__text {
         margin-bottom: 20px;
@@ -17,6 +24,11 @@
         transition: all 0.3s;
         &:hover {
             filter: brightness(100%);
+        }
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }

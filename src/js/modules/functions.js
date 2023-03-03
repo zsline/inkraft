@@ -45,29 +45,40 @@ const swiper2 = new Swiper('.portfolio__container', {
         el: '.swiper-pagination',
         type: 'bullets',
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        740: {
+            slidesPerView: 1.3,
+        },
+        960: {
+            slidesPerView: 2.2,
+        },
+    },
 });
 //============
 // слайдер products
 //============
-const w = +window.innerWidth;
-const cont = document.querySelector('.products__title').clientWidth;
-const gap = (w - cont) / 2.08;
-console.dir(gap);
-const swiper3 = new Swiper('.products__slider', {
+// const w = window.innerWidth;
+// const cont = document.querySelector('.products__title').clientWidth;
+// const gap = (w - cont) / 1.5;
+// console.dir(gap);
+const swiper3 = new Swiper('.products__slider-img--inner', {
     modules: [Navigation, Pagination],
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    wrapperClass: 'products__slider--wrapper',
-    slideClass: 'products__slider--slide',
-    slidesOffsetBefore: gap,
+    wrapperClass: 'products__slider-img--wrapper',
+    slideClass: 'products__slider-img--slide',
     loop: true,
-    slidesPerView: 1.41,
+    slidesPerView: 1,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    effect: 'cards',
 });
 //============
 // табы "выполненные работы"

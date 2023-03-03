@@ -1,10 +1,10 @@
 :root {
     --index: calc(1vw + 1vh);
     --accent: #C18E57;
-    --main-gap: calc(var(--index) * 5);
+    --main-gap: 15px;
     --big-gap: calc(var(--index) * 10);
-    --small-gap: calc(var(--index) * 2);
-    --body-width: 1550px;
+    --small-gap: 10px;
+    --body-width: 1580px;
     --body-fonts: "Montserrat", sans-serif;
     --second-fonts: "Bahamas", sans-serif;
     --bg-color: #000;
